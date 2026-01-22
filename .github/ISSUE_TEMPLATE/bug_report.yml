@@ -1,0 +1,65 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve the game
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  
+  - type: input
+    id: godot_version
+    attributes:
+      label: Godot Version
+      description: Which version of Godot are you using? (e.g., 4.3.stable, 4.2.1.dotnet)
+      placeholder: 4.3.stable
+    validations:
+      required: true
+
+  - type: input
+    id: os_version
+    attributes:
+      label: OS / Device
+      description: What OS are you running? (e.g., Windows 11, Ubuntu 24.04, MacOS Sequoia)
+      placeholder: Windows 11 / Steam Deck
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: A concise description of the bug.
+      placeholder: When I jump while holding the attack button, the animation freezes...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: How can we make this bug happen on our machine?
+      value: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen instead?
+      placeholder: The attack animation should play fully and then return to idle.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs
+      description: Paste any errors from the Godot Debugger or Output console here.
+      render: shell
