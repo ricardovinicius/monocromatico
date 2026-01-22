@@ -29,8 +29,8 @@ jobs:
         id: export_godot
         uses: firebelley/godot-export@v7.0.0
         with:
-          godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/${{ env.GODOT_VERSION }}/Godot_v${{ env.GODOT_VERSION }}-linux.x86_64.zip
-          godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/${{ env.GODOT_VERSION }}/official_export_templates/Godot_v${{ env.GODOT_VERSION }}-export-templates.tpz
+          godot_executable_download_url: ${{ format('https://downloads.godotengine.org/?version={0}&flavor=stable&slug=linux.x86_64.zip&platform=linux.64', env.GODOT_VERSION) }}
+          godot_export_templates_download_url: ${{ format('https://downloads.godotengine.org/?version={0}&flavor=stable&slug=export_templates.tpz&platform=templates', env.GODOT_VERSION) }}
           relative_project_path: ${{ env.PROJECT_PATH }}
           archive_output: true
       
