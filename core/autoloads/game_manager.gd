@@ -25,7 +25,6 @@ func _ready() -> void:
 # Call this when a playable level loads
 func start_gameplay() -> void:
     is_paused = false
-    Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _unhandled_input(event: InputEvent) -> void:
     # "ui_cancel" is bound to the Escape key by default
