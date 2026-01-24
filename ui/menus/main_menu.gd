@@ -10,6 +10,10 @@ func _ready() -> void:
 
 func _on_start_button_pressed() -> void:
 	print("[UI] Start Button Pressed. Changing to Level Scene.")
+
 	var error: int = get_tree().change_scene_to_file(LEVEL_PATH)
 	if error != OK:
 		push_error("[UI] Failed to load Level scene: %s" % LEVEL_PATH)
+		return
+
+	GameManager.start_gameplay()
