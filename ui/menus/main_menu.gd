@@ -1,4 +1,4 @@
-extends Control
+class_name MainMenu extends Control
 
 const LEVEL_PATH: String = "res://levels/sandbox.tscn"
 
