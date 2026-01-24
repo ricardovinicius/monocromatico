@@ -13,7 +13,3 @@ func _on_start_button_pressed() -> void:
 	var error: int = get_tree().change_scene_to_file(LEVEL_PATH)
 	if error != OK:
 		push_error("[UI] Failed to load Level scene: %s" % LEVEL_PATH)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
