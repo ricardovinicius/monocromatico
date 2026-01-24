@@ -24,7 +24,3 @@ func _change_to_menu() -> void:
 	var error: int = get_tree().change_scene_to_file(MAIN_MENU_PATH)
 	if error != OK:
 		push_error("[Boot] Failed to load Main Menu scene: %s" % MAIN_MENU_PATH)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
