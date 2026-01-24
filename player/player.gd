@@ -22,8 +22,7 @@ class_name Player extends CharacterBody3D
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
-    # Captures the mouse cursor so it doesn't leave the game window
-    Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+    pass
 
 func _unhandled_input(event: InputEvent) -> void:
     # Camera Rotation logic
@@ -37,10 +36,6 @@ func _unhandled_input(event: InputEvent) -> void:
         
         # Clamp the look angle so you can't somersault your head
         head.rotation.x = clamp(head.rotation.x, deg_to_rad(min_pitch), deg_to_rad(max_pitch))
-
-    # Escape to release mouse (for debugging)
-    if event.is_action_pressed("ui_cancel"):
-        Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _physics_process(delta: float) -> void:
     # 1. Apply Gravity
