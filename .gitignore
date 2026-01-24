@@ -2,3 +2,6 @@
 .godot/
 /android/
 /builds/
+
+# VSCode settings
+.vscode/
