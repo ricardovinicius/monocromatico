@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs3lfmloa52ie"]
+
+[ext_resource type="Texture2D" uid="uid://y80nroow0qid" path="res://assets/prototype_grid_01.png" id="1_s51j0"]
+[ext_resource type="Script" path="res://pcg_dungeon/room_exit.gd" id="2_mpe71"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpe71"]
+albedo_texture = ExtResource("1_s51j0")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="Sky" id="Sky_uw2sw"]
+
+[sub_resource type="Environment" id="Environment_y338o"]
+background_mode = 2
+sky = SubResource("Sky_uw2sw")
+
+[node name="LargeRoom" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 11.239243, 0)
+shadow_enabled = true
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(50, 0.5, 50)
+material = SubResource("StandardMaterial3D_mpe71")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_y338o")
+
+[node name="RoomExit" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.89999, 0, 0)
+script = ExtResource("2_mpe71")
+depth_increment = 1
+
+[node name="RoomExit2" type="Marker3D" parent="."]
+transform = Transform3D(-4.3711392e-08, -1.0000002, 0, 1.0000001, -4.37114e-08, 0, 0, 0, 1.0000002, 0, -0.94, 25.599854)
+script = ExtResource("2_mpe71")
+exit_name = "Left"
