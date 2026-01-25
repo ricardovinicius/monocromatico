@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1fquboivt45n"]
+
+[ext_resource type="Script" uid="uid://cc3motal7iqmy" path="res://pcg_dungeon/debug/dungeon_visualizer.gd" id="1_1j75t"]
+[ext_resource type="Script" uid="uid://c85rowjfqyy2o" path="res://pcg_dungeon/dungeon_generator.gd" id="2_ko415"]
+
+[node name="DungeonVisualizer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1j75t")
+
+[node name="DungeonGenerator" type="Node" parent="."]
+script = ExtResource("2_ko415")
