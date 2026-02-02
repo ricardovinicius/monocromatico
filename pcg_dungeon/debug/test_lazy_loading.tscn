@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chgqgifxfw7jq"]
+
+[ext_resource type="Script" uid="uid://crfnlvi3xlcak" path="res://pcg_dungeon/debug/test_lazy_loading.gd" id="1_47mpl"]
+
+[node name="TestLazyLoading" type="Node"]
+script = ExtResource("1_47mpl")

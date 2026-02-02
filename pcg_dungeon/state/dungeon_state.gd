@@ -4,16 +4,10 @@ extends Resource
 @export_group("Identity")
 @export var uuid: String = ""
 @export var preset_id: String = ""
-@export var seed: String = ""
-
-@export_group("Presets")
-# Mapping of preset IDs to their data
-@export var rooms_presets: Dictionary = {}
-@export var corridors_presets: Dictionary = {}
+@export var _seed: int = 0
 
 @export_group("Structure")
 @export var rooms: Array[RoomState] = []
-@export var corridors: Array[CorridorState] = []
 
 @export_group("Gameplay State")
 # TODO: Adjust according to your game's needs

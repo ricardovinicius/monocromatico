@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RoomData" load_steps=4 format=3 uid="uid://c3oe6ccmfyr4v"]
+
+[ext_resource type="Script" uid="uid://cuau7ib6ki2wx" path="res://pcg_dungeon/data/exit_data.gd" id="1_xiix7"]
+[ext_resource type="PackedScene" uid="uid://yheqxucdjsvl" path="res://pcg_dungeon/presets/rooms/small_corridor.tscn" id="2_38fvi"]
+[ext_resource type="Script" uid="uid://c06827o5yaxfv" path="res://pcg_dungeon/data/room_data.gd" id="3_hg736"]
+
+[resource]
+script = ExtResource("3_hg736")
+preset_id = "small_corridor"
+scene = ExtResource("2_38fvi")

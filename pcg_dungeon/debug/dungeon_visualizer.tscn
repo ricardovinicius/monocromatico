@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1fquboivt45n"]
+
+[ext_resource type="Script" uid="uid://b1k031tdwov2p" path="res://pcg_dungeon/debug/dungeon_visualizer.gd" id="1_dvbse"]
+[ext_resource type="Script" uid="uid://co338wr6wgrxp" path="res://pcg_dungeon/dungeon_manager.gd" id="2_c28f2"]
+[ext_resource type="Script" uid="uid://bi83itoav0r2w" path="res://pcg_dungeon/debug/visualizer_ui.gd" id="3_i7pip"]
+
+[node name="DungeonVisualizer" type="Node2D" node_paths=PackedStringArray("dungeon_manager")]
+script = ExtResource("1_dvbse")
+dungeon_manager = NodePath("DungeonManager")
+
+[node name="DungeonManager" type="Node" parent="."]
+script = ExtResource("2_c28f2")
+metadata/_custom_type_script = "uid://co338wr6wgrxp"
+
+[node name="VisualizerUI" type="VBoxContainer" parent="." node_paths=PackedStringArray("dungeon_manager")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_i7pip")
+dungeon_manager = NodePath("../DungeonManager")
+
+[node name="Button" type="Button" parent="VisualizerUI"]
+layout_mode = 2
+text = "Initialize Dungeon"
+
+[node name="Button2" type="Button" parent="VisualizerUI"]
+layout_mode = 2
+text = "Expand Current Room"
+
+[node name="Button3" type="Button" parent="VisualizerUI"]
+layout_mode = 2
+text = "Go to Next Room"
+
+[connection signal="pressed" from="VisualizerUI/Button" to="VisualizerUI" method="_on_initialize_pressed"]
+[connection signal="pressed" from="VisualizerUI/Button2" to="VisualizerUI" method="_on_expand_pressed"]
+[connection signal="pressed" from="VisualizerUI/Button3" to="VisualizerUI" method="_on_next_room_pressed"]

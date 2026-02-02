@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs3lfmloa52ie"]
+[gd_scene load_steps=5 format=3 uid="uid://yheqxucdjsvl"]
 
-[ext_resource type="Texture2D" uid="uid://y80nroow0qid" path="res://assets/prototype_grid_01.png" id="1_s51j0"]
+[ext_resource type="Texture2D" uid="uid://y80nroow0qid" path="res://assets/prototype_grid_01.png" id="1_cmyus"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpe71"]
-albedo_texture = ExtResource("1_s51j0")
+albedo_texture = ExtResource("1_cmyus")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 texture_filter = 0
@@ -22,7 +22,7 @@ shadow_enabled = true
 
 [node name="Floor" type="CSGBox3D" parent="."]
 use_collision = true
-size = Vector3(50, 0.5, 50)
+size = Vector3(5, 0.5, 20)
 material = SubResource("StandardMaterial3D_mpe71")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

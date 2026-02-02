@@ -4,7 +4,7 @@ extends Resource
 @export_group("Identity")
 @export var uuid: String = ""
 @export var depth: int = 0
-@export var preset_id: String = "" 
+@export var preset_id: String = ""
 
 @export_group("Placement")
 ## The absolute center of the room in the world
@@ -13,8 +13,7 @@ extends Resource
 @export var global_rotation: float = 0.0
 
 @export_group("Connectivity")
-## Stores exit data: { "SocketName": { "corridor_uuid": String, "type": String } }
-@export var exits: Dictionary = {} 
+@export var exits: Array[ExitState] = []
 
 @export_group("Gameplay State")
 @export var is_visited: bool = false
